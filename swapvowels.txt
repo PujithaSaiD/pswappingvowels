@@ -1,0 +1,18 @@
+s=input()
+s=list(s)
+l="aeiou"
+i,j=0,len(s)-1
+while i<j:
+  if s[i] in "aeiouAEIOU" and s[j] in "aeiouAEIOU":
+    s[i],s[j]=s[j],s[i]
+    i=i+1
+    j=j-1
+  elif s[i] in "aeiouAEIOU" and s[j] not in "aeiouAEiOU":
+    j=j-1
+  elif s[i] not in "aeiouAEIOU" and s[j] in "aeiouAEIOU":
+    i=i+1
+  else:
+    i=i+1
+    j=j-1
+s1="".join(s)
+print(s1)
